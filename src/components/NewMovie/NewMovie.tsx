@@ -25,10 +25,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
 
   function allFieldsNotEmpty() {
     return Boolean(
-      title.trim() &&
-        imdbUrl.trim() &&
-        imgUrl.trim() &&
-        imdbId.trim(),
+      title.trim() && imdbUrl.trim() && imgUrl.trim() && imdbId.trim(),
     );
   }
 
@@ -65,12 +62,7 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
       <h2>Add a movie</h2>
 
       <form key={count} onSubmit={handleSubmit}>
-        <TextField
-          name="title"
-          value={title}
-          required
-          onChange={setTitle}
-        />
+        <TextField name="title" value={title} required onChange={setTitle} />
 
         <TextField
           name="description"
